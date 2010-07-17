@@ -1,3 +1,4 @@
+require 'lib/parser'
 class Page
   attr_reader :title, :links
   attr_accessor :body
@@ -14,12 +15,7 @@ class Page
 
   private
   def scan_links(string)
-    links = []
-    matches = string.match /\[\[(.*)\]\]/
-    if matches.nil?
-      links
-    else
-      links << matches[0][2..-3]
-    end
+    parser = LinkParser.new(string)
+    parser.extract
   end
 end
