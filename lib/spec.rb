@@ -24,12 +24,12 @@ def expect_raises(exception)
 end
 
 def describe(message='')
-  yield
+  yield(message)
 end
 
 def it(message='')
   begin
-    yield
+    yield(message)
   rescue ExpectationError => e
     puts "Failure: #{e.message} #{message}\n#{e.backtrace.join("\n")}"
   end
