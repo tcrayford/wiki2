@@ -11,10 +11,11 @@ describe "parser" do
       expect_equal extract(''), []
     end
 
-    it "returns an empty array with some text" do
+    it "returns an empty array given some text" do
       expect_equal extract('body'), []
     end
   end
+
   it "extracts a single link" do
     expect extract('[[article]]').include? 'article'
   end

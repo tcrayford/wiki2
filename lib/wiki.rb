@@ -2,6 +2,7 @@ require 'lib/parser'
 class Page
   attr_reader :title, :links
   attr_accessor :body
+
   def initialize(title,body='')
     @title = title
     @body = body
@@ -14,7 +15,7 @@ class Page
   end
 
   private
-  def scan_links(string)
-    LinkScanner.new(string).extract
+  def scan_links(text)
+    LinkScanner.new(text).extract
   end
 end

@@ -2,7 +2,8 @@ class ExpectationError < StandardError
 end
 
 def expect_equal(expected,actual,message='')
-  expect expected==actual, "#{expected.inspect} not equal to #{actual.inspect} #{", #{message}"}"
+  expect expected==actual,
+    "#{expected.inspect} not equal to #{actual.inspect} #{", #{message}"}"
 end
 
 def expect(bool,message='')
@@ -18,10 +19,15 @@ def expect_raises(exception)
     yield
     expect false, "expect_raises failed"
   rescue exception => e #expected
+    print '.'
   end
 end
 
 def describe(message='')
+  yield
+end
+
+def it(message='')
   begin
     yield
   rescue ExpectationError => e
@@ -29,6 +35,5 @@ def describe(message='')
   end
 end
 
-alias :it :describe
 alias :context :describe
 alias :before :describe
