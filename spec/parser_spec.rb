@@ -2,7 +2,7 @@ require 'lib/parser'
 require 'lib/spec'
 
 def extract(text) #{{{
-  return LinkParser.new(text).extract
+  return LinkScanner.new(text).extract
 end #}}}
 
 describe "parser" do

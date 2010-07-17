@@ -15,7 +15,6 @@ class Page
 
   private
   def scan_links(string)
-    parser = LinkParser.new(string)
-    parser.extract
+    LinkScanner.new(string).extract
   end
 end
