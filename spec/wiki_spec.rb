@@ -20,7 +20,7 @@ describe "a page" do
     end
 
     it "has a new body" do
-      #expect_equal @page.body, 'another body'
+      expect_equal @page.body, 'another body'
     end
   end
 
