@@ -1,4 +1,4 @@
-require 'lib/wiki'
+require 'lib/page'
 require 'lib/spec'
 
 describe "a page" do
