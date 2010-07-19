@@ -1,6 +1,7 @@
 require 'lib/spec'
 require 'lib/wiki'
 require 'lib/page'
+
 describe "Wiki" do
   context "with one page" do
     before do
