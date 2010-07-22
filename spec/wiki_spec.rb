@@ -1,6 +1,6 @@
-require 'lib/spec'
-require 'lib/wiki'
-require 'lib/page'
+require File.expand_path('../../lib/wiki',__FILE__)
+require File.expand_path('../../lib/spec',__FILE__)
+require File.expand_path('../../lib/page',__FILE__)
 
 describe "Wiki" do
   context "with one page" do

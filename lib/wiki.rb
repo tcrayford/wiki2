@@ -1,4 +1,6 @@
 class Wiki
+  include Enumerable
+
   def initialize
     @pages = []
   end
@@ -6,8 +8,6 @@ class Wiki
   def each(&block)
     @pages.each &block
   end
-
-  include Enumerable
 
   def save!(page)
     @pages << page

@@ -1,4 +1,4 @@
-require 'lib/parser'
+require File.expand_path('../../lib/parser',__FILE__)
 class Page
   attr_reader :title, :links
   attr_accessor :body

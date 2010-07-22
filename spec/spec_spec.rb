@@ -1,4 +1,4 @@
-require 'lib/spec'
+require File.expand_path('../../lib/spec',__FILE__)
 describe "expect" do
   it "returns nothing on a true boolean" do
     expect true, 'this will always return true'

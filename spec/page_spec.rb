@@ -1,5 +1,5 @@
-require 'lib/page'
-require 'lib/spec'
+require File.expand_path('../../lib/page',__FILE__)
+require File.expand_path('../../lib/spec',__FILE__)
 
 describe "a page" do
   before do

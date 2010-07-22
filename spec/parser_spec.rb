@@ -1,9 +1,9 @@
-require 'lib/parser'
-require 'lib/spec'
+require File.expand_path('../../lib/parser',__FILE__)
+require File.expand_path('../../lib/spec',__FILE__)
 
-def extract(text) #{{{
+def extract(text)
   return LinkScanner.new(text).extract
-end #}}}
+end
 
 describe "parser" do
   context "no links" do
